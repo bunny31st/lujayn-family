@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			width: 100vw;
+			height: 100vh;
+			background-color: lightblue;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.container {
+			position: relative;
+			width: 100%;
+			height: 100%;
+		}
+
+		h1.lujayn {
+			font-size: 250px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-weight: bold;
+			margin: 0;
+			transition: all 0.8s ease;
+			text-transform: uppercase;
+		}
+
+		h1.lujayn.white {
+			clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
+			color: white;
+		}
+
+		h1.lujayn.black {
+			color: #2d3436;
+			clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%);
+		}
+
+		h1.lujayn.white:hover {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+			z-index: 9;
+			text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+		}
+
+		h1.lujayn.black:hover {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+			z-index: 9;
+			text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+		}
+
+		h1.lujayn.white:hover ~ span.family{color: white;}
+		h1.lujayn.black:hover ~ span.family{color: #2d3436;}
+
+		span.family {
+			position: absolute;
+			font-size: 35px;
+			text-transform: uppercase;
+			font-weight: 400;
+			top: 60%;
+			right: 17%;
+			font-family: fantasy;
+			letter-spacing: 10px;
+			transition: all 0.8s ease;
+			color: #2d3436;
+			text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+		}
+
+		h1.lujayn.white:hover span.family {
+			color: white !important;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1 class="lujayn white">Lujayn</h1>
+		<h1 class="lujayn black">Lujayn</h1>
+		<span class="family">Family</span>
+	</div>
+</body>
+
+</html>
